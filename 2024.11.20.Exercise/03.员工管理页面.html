@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>员工管理页面</title>
+
+    <style>
+        /* flex弹性布局 采用flex布局的元素称为Flex容器，其所有的子元素自动成为容器成员，称为flex项目（item） */
+        .header {
+            display: flex;
+            /* 启用弹性布局 */
+            /* flex-direction: column; 垂直方向进行布局 */
+            flex-direction: row;
+            /* 水平方向进行布局（默认） */
+            justify-content: space-between;
+            /* 均分flex的空间 */
+            align-items: center;
+            /* 水平居中 */
+            background-color: #c2c0c0;
+            /* 背景色 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            /* 阴影 */
+            padding: 10px 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            /* 去掉超链接的默认样式 */
+            font-size: 24px;
+            /* 字体大小 */
+            font-weight: bold;
+            /* 加粗 */
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            /* 去掉超链接的下划线 */
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        /* 搜索表单区域 */
+        .search-form {
+            display: flex;
+            /* 启用弹性布局 */
+            padding: 20px;
+            /* 内边距 */
+            background-color: #f9f9f9;
+            /* 背景色 */
+            padding: 20px;
+        }
+
+        /* 表单控件样式 */
+        .search-form input,
+        .search-form select {
+            margin-right: 50px;
+            /* 各个元素之间的右边距 */
+            padding: 5px, 10px;
+            /* 各个元素到父元素的内边距：上下5px，左右10px */
+            border: 1px solid #ccc;
+            /* 边框 */
+            border-radius: 3px;
+            /* 圆角 */
+            width: 260px;
+            /* 宽度 */
+            height: 35px;
+        }
+
+        /* 按钮样式 */
+        .search-form button {
+            padding: 5px 15px;
+            margin-right: 20px;
+            background-color: #007bff;
+            /* 背景色 */
+            color: white;
+            /* 字体颜色 */
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            /* 鼠标悬停时的样式——鼠标悬停时，鼠标指针会变成小手 */
+            width: 75px;
+            height: auto;
+        }
+
+        /* 清空按钮样式 */
+        .search-form button.clear {
+            background-color: #6c757d;
+        }
+
+        /* 表格样式 */
+        .table {
+            margin-top: 30px;
+            min-width: 100%;
+            border-collapse: collapse;
+            /*合并边框 */
+        }
+
+        /* 单元格样式 */
+        .table td,
+        .table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            /*内边距*/
+            text-align: center;
+            /* 水平居中 */
+        }
+
+        /* 头像样式 */
+        .avatar {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            /* 裁剪图片 */
+            border-radius: 50%;
+            /* 圆角 */
+        }
+
+        .footer {
+            background-color: #c2c0c0;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
+            /* 与上一个元素的距离 */
+        }
+
+        .footer .company-name {
+            font-size: 1.1em;
+            /* 字体大小 1.1倍 */
+            font-weight: bold;
+        }
+
+        .footer .copyright {
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+
+        #container {
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="container">
+        <div class="header">
+            <!-- 顶栏 -->
+            <h1><span id="title">Tlias学习辅助系统</span></h1>
+            <a href="#">退出登录</a>
+        </div>
+
+        <!-- 
+        表单
+        表单是用于提交数据的标签
+        <form>
+        表单属性
+            action：表单提交数据的地址
+            method：表单提交数据的方式
+                get：将数据通过url地址发送给服务器：表单数据拼接在URL的后面，数据大小是有限制的
+                并且get方式直接将提交的数据暴露在UTL中，不安全
+                post：将数据通过post请求发送给服务器：表单数据是在请求体（body）中携带的，大小没有限制
+        表单元素
+            <input>：输入框，通过type属性控制输入的形式
+                属性：type：输入框的类型
+                    text：文本输入框
+                    password：密码输入框
+                    radio：单选框
+                    checkbox：复选框
+            </input>
+        注意！表单中所有的表单项，若想要正常采集数据，在提交时能够正常提交到服务端，表单项必须指定name属性；否则无法提交该表单项
+    -->
+
+        <!-- 搜索表单区域 -->
+        <form action="#" method="get" class="search-form">
+            <input type="text" name="name" placeholder="请输入员工姓名">
+
+            <select name="gender">
+                <option value="">-请选择员工性别-</option>
+                <option value="1">男</option>
+                <option value="0">女</option>
+            </select>
+
+            <select name="job">
+                <option value="">-请选择员工职位-</option>
+                <option value="1">班主任</option>
+                <option value="2">讲师</option>
+                <option value="3">学工主管</option>
+                <option value="4">教研主管</option>
+                <option value="5">咨询师</option>
+            </select>
+            <button type="submit">查询</button>
+            <!-- 提交时会将整个表单域内的数据提交给服务器 -->
+            <button type="reset" class="clear">清空</button>
+        </form>
+
+        <!-- 
+        表格table：表格是用于展示数据的
+        表格标签：
+            <table></table> 定义表格整体
+            <thead></thead：定义表格头部
+            <tbody></tbody>：定义表格主体
+            <tr></tr>：定义表格行，可以包裹多个<td>
+            <td></td>：定义表格单元格，可以包裹内容，如果是表头的单元格，则使用<th>标签
+
+        表格样式：
+            border：表格边框
+            border-collapse：合并边框
+            width：表格宽度
+            height：表格高度
+            text-align：水平对齐方式
+            vertical-align：垂直对齐方式
+    -->
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>头像</th>
+                    <th>职位</th>
+                    <th>入职时间</th>
+                    <th>最后操作时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>令狐冲</td>
+                    <td>男</td>
+                    <td><img src="https://via.placeholder.com/50" alt="令狐冲" class="avatar"></td>
+                    <td>讲师</td>
+                    <td>2021-03-15</td>
+                    <td>2023-07-30T12:00:00Z</td>
+                    <td class="btn-group">
+                        <button>编辑</button>
+                        <button>删除</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>任盈盈</td>
+                    <td>女</td>
+                    <td><img src="https://via.placeholder.com/50" alt="任盈盈" class="avatar"></td>
+                    <td>学工主管</td>
+                    <td>2020-04-10</td>
+                    <td>2023-07-29T15:00:00Z</td>
+                    <td class="btn-group">
+                        <button>编辑</button>
+                        <button>删除</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>岳不群</td>
+                    <td>男</td>
+                    <td><img src="https://via.placeholder.com/50" alt="岳不群" class="avatar"></td>
+                    <td>教研主管</td>
+                    <td>2019-01-01</td>
+                    <td>2023-07-30T10:00:00Z</td>
+                    <td class="btn-group">
+                        <button>编辑</button>
+                        <button>删除</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>宁中则</td>
+                    <td>女</td>
+                    <td><img src="https://via.placeholder.com/50" alt="宁中则" class="avatar"></td>
+                    <td>班主任</td>
+                    <td>2018-06-01</td>
+                    <td>2023-07-29T09:00:00Z</td>
+                    <td class="btn-group">
+                        <button>编辑</button>
+                        <button>删除</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>林平之</td>
+                    <td>男</td>
+                    <td><img src="https://via.placeholder.com/50" alt="林平之" class="avatar"></td>
+                    <td>咨询师</td>
+                    <td>2017-01-01</td>
+                    <td>2023-07-30T12:00:00Z</td>
+                    <td class="btn-group">
+                        <button>编辑</button>
+                        <button>删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!-- 页脚版权区域 -->
+        <footer class="footer">
+            <p class="company-name">faker</p>
+            <p class="copyright">版权所有 Copyright 2006-2024 All Rights Reserved</p>
+        </footer>
+    </div>
+
+
+
+</body>
+
+</html>
