@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript变量使用</title>
+</head>
+
+<body>
+    <!-- JavaScript是一个弱类型的语言，变量是可以存放不同类型的值的
+         js中主要是通过let关键字前声明变量
+
+         js中变量标识符命名规则和Java一样    
+    -->
+
+    <!-- <script>
+        let a = 20;
+        alert(a);
+        a = "hello";
+        alert(a);
+        // 上述代码，a既可以存储数字，又可以存储字符串，证明了js是弱类型的语言
+    </script> -->
+
+    <!-- 
+        在早期的js中，声明变量还可以使用var关键字声明
+        但是因为var关键字是有些不严谨的，所以说不建议使用var，而是使用let关键字
+    -->
+
+    <!-- <script>
+        var name = "a";
+        name = "b";
+        alert(name);
+
+        var name = "c";
+        alert(name);
+
+        // name变量在这个script中重复声明了，这是不严谨的，但是使用var就可以
+    </script> -->
+
+    <!-- <script>
+        let name = "a";
+        name = "b";
+        alert(name);
+
+        let name = "c";
+        alert(name);
+
+        // 使用let，浏览器显示是没有错误的，但是控制台已经报错了：name has been declared
+    </script> -->
+
+    <!-- 
+        JavaScript中的常量声明：const关键字，常量一旦声明，若想改变其值，那么将会报错
+    -->
+
+    <!-- <script>
+        const name = "tom";
+        name = "jack";
+        alert(name);
+        // 浏览器不会显示，报错：Assignment to constant variable
+    </script> -->
+
+
+    <!-- 
+        js中的数据类型
+        js虽然是弱类型的语言，但是js中也是存在数据类型的；其分为：原始数据类型和引用数据类型（基本数据类型和引用数据类型）
+        原始数据类型：
+            1. undefined：表示未定义，表示一个变量没有初始化，但是已经声明
+            2. boolean：表示布尔值，true和false，大小写敏感
+            3. number：表示数字，支持整数和小数，支持浮点数，支持科学计数法，支持负数，支持正负数，支持正负浮点数
+            4. string：表示字符串，字符串中可以包含数字
+            5. null：表示对象为空值，注意js大小写敏感，null、Null、NULL完全不同
+
+        关键字typeof可以返回变量的数据类型
+    -->
+
+    <script>
+        //原始数据类型
+        alert(typeof 3); //number
+        alert(typeof 3.14); //number
+
+        alert(typeof "A"); //string
+        alert(typeof 'Hello');//string
+
+        alert(typeof true); //boolean
+        alert(typeof false);//boolean
+
+        alert(typeof null); //object 
+
+        let a;
+        alert(typeof a); //undefined
+    </script>
+
+
+    <script>
+        /* 
+        模板字符串：字符串类型的数据，可以使用双引号""，也可以使用单引号''，也可以使用反引号``
+        使用反引号的字符串称为模板字符串
+        模板字符串可以用来简便的拼接字符串和变量
+        内容拼接时，使用${}来引用变量，避免了 “+” 来拼接字符串和变量
+        */
+        let name = "tom";
+        let age = 18;
+        // 常规拼接
+        console.log('大家好我是' + name + '今年' + age + '岁了');
+        // 使用模板字符串简便拼接
+        console.log(`大家好我是${name}今年${age}岁了`);
+
+    </script>
+</body>
+
+</html>
