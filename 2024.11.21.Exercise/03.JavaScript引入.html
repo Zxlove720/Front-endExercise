@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript引入</title>
+</head>
+
+<body>
+    <!-- JavaScript（和Java没有关系）是一个跨平台、面向对象的脚本语言；是控制HTML的行为的，和HTML、CSS一起构成了网页的三要素 -->
+    <!-- JavaScript在HTMl中主要通过两种方法进行引入：
+            1. 在script标签中直接写代码，这种写法比较简单，但是不方便维护，不建议使用
+                  JavaScript的代码必须在<script>标签中，是可以存在于HTML中的任何位置，并且可以存在任意个
+                  但是一般将其放置在<body>元素的底部，可以改善网页显示的速度
+            2. 在script标签中引入外部js文件，这种写法比较常用，但是需要先创建js文件，再引入
+    -->
+
+
+</body>
+
+<!-- <script>
+    alert("Hello JavaScript")
+</script> -->
+
+    <!-- 从外部引入js文件 -->
+    <!-- js不是标签语言，所以说不能在其中定义<script>之类的标签，其中只有js代码 -->
+    <script src="js/03js.js"></script>
+
+    <!--
+        js中有三种输出语句：
+            1.window.alert()：在页面弹出警告框输出
+            2.window.console.long()：在控制台中输出
+            3.document.write()：直接在页面中输出，但是不建议使用，因为会覆盖掉页面中的所有内容
+
+            注：为什么window可以省略？window是浏览器环境中的全局对象，在全局作用域下，渲染引擎可以找到window并使用
+    -->
+    
+    <script>
+        alert("Hello JavaScript")
+        console.log("Hello JavaScript")
+        document.write("Hello JavaScript")
+    </script>
+</html>
