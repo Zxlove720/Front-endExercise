@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML表格练习</title>
+
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            /* 水平居中 上下不变，左右自动调整 */
+        }
+
+        .table {
+            border: 2px solid black;
+            /* 边框 */
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 50px;
+            /* 距离上一个元素的距离: 50px */
+        }
+
+        .table td,.table th {
+            border: 2px solid #ddd;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>性别</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>张三</td>
+                    <td>18</td>
+                    <td>男</td>
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td>24</td>
+                    <td>男</td>
+                </tr>
+                <tr>
+                    <td>王五</td>
+                    <td>25</td>
+                    <td>男</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+</body>
+
+</html>
