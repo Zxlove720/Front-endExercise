@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript对象</title>
+</head>
+<body>
+
+    <script>
+        // JavaScript中也可以自定义对象，和Java中的对象类似（具备属性和方法）
+        // 定义格式：
+        // let 对象名 = {
+        //     属性名1: 属性值1,
+        //     属性名2: 属性值2,
+        //     属性名3: 属性值3,
+        //     方法名称: function(形参列表){}
+        // };
+        // 
+        let Student = {
+            name : "张三",
+            age : 18,
+            number : 123456,
+            
+            // show : function () {
+            //     alert(this.name + "   " + this.age + "  " + this.number)
+            // }
+
+            // 可以简化为
+            show() {
+                console.log(this.name + "   " + this.age + "  " + this.number);
+            } 
+
+            // // 对象中的方法不能使用箭头函数，箭头函数中的this关键字是指向的父类，并非本类
+            // show : () => {
+            //     alert(this.name + "   " + this.age + "  " + this.number)
+            // }
+        };
+
+        // 和Java一样，通过对象名 + 属性使用对象中的属性；对象名 + 方法使用对象中的方法
+        alert(Student.name);
+        alert(Student.age);
+        Student.show();
+    </script>
+
+    <script>
+        // json格式（JavaScript Object Notation）JavaScript对象标记法：是通过JavaScript标记法书写的文本（本质是字符串）
+        // 其形式主要是 Key - Value键值对形式； 
+        // Key必须使用引号，并且必须是双引号将其标记
+        // Value可以是任何类型的数据，但是若Value是String类型，也必须使用双引号标记
+        // 如
+        /* 
+        {
+            "name": "zhangsan",
+            "age": 18,
+            "number": "123456"
+        }
+
+        */
+
+        // json格式语法简单，层级结构鲜明，现多用于作为数据载体，在网络中进行数据传输
+        let Person = {
+            name: "李四",
+            age: 24,
+            number: "123456",
+        };
+
+        // 使用JSON类中的方法实现js对象 -> json字符串； json字符串 -> js对象
+        // JSON.stringify() 将js对象解析为json字符串
+        // JSON.parse() 将json字符串解析为js对象
+        alert(JSON.stringify(Person))
+        let personJson = '{"name": "jack", "age": 18}';
+        let parsePerson = JSON.parse(personJson)
+        alert(parsePerson.name + parsePerson.age);
+
+    </script>
+    
+</body>
+</html>
