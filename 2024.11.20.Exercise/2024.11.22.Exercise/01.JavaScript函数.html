@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript函数</title>
+</head>
+<body>
+    <script>
+        // js 中的函数和其他编程语言是一样的，都是为了执行特定任务的封装的代码块，提高了程序的复用性
+        // js 定义函数的方式 function functionName(arg1, arg2...) {函数体}
+        // js定义函数需要使用关键字function + 函数名 
+        // 注意！！！因为js是弱类型的语言，所以说函数不需要返回值类型，直接return，参数也不需要指定类型
+        
+        function add(number1, number2) {
+            return number1 + number2;
+        }
+        // 正常调用add函数
+        alert(add(2, 3))
+
+        // 调用函数时，实参和形参个数可以不一致
+        // 实参比形参多一个，形参只会按照顺序依次接收实参，虽然不规范，但是不影响正常使用
+        alert(add(2, 3, 4)); // 只会接收前两个实参————2、3
+
+
+        // 匿名函数
+        // 必须要用变量接收，不需要写函数名
+        //（可以理解为这个接收的变量就变成了这个函数，可以通过这个变量调用函数）
+        let result = function (number1, number2) {
+            return number1 - number2;
+        }
+
+        alert(result(9, 3));
+
+        // 箭头函数
+        // 相对于匿名函数，箭头函数也是需要使用变量接收，但是不需要使用function关键之，而是使用=>构成一个镜头
+        let result2 = (a, b) => {
+            alert(a + b)
+        }
+
+        result2("hello", "world");
+        result2(1, 2)
+
+
+    </script>
+    
+</body>
+</html>
