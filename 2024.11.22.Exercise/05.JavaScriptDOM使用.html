@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptDOM使用</title>
+</head>
+<body>
+
+    <h1>我是用于测试JavaScriptDOM的h1</h1>
+    <h1>我是用于测试JavaScriptDOM的h1 2.0</h1>
+    <h2>我是用于测试JavaScriptDOM的h2</h2>
+
+    <script>
+        // JS DOM
+        // DOM：Document Object Model 文档对象模型。也就是JavaScript将HTML文档的各个组成部分封装为对象
+        
+        // 封装的对象分别为：
+        // Document：整个HTML的文档对象
+        // Element：元素对象（也就是HTML中的标签）
+        // Attribute：属性对象（HTML标签中的属性）
+        // Text：文本对象（标签中的文本）
+        // Comment：注释对象
+
+
+        // js获得了HTML中各个组成部分的对象，就可以添加和删除HTML元素、改变HTML元素的内容、样式和对HTML DOM事件做出反应
+
+        // DOM核心思想：将网页的所有内容当作对象进行处理，标签的所有属性在该对象上都可以找到，
+        // 并且修改这个对象的属性，就会自动映射到对应标签上
+
+        // document对象
+        // 网页中所有内容都封装在document对象中
+        // document对象提供的属性和方法都是用来访问和操作网页内容的，如：document.write()
+
+        // DOM操作步骤：
+        // 1.获取DOM元素对象
+        // 2.操作DOM对象的属性或方法
+        
+
+        // 如何获取DOM元素
+        // 1.通过CSS的选择器获取：document.querySelector('CSS选择器'); 获取选择器匹配到的第一个元素
+        
+        // 2.通过CSS的选择器获取：document.querySelectAll('CSS选择器'); 获取选择器匹配到的所有元素
+        // 获取到的所有元素，会封装到一个NodeList对象中返回，NodeList就相当于一个伪数组（有长度、索引的数组；但是不完全是数组）
+
+        // 测试
+        // HTML中有两个h1标签，通过querySelector('h1')只能获取匹配到的第一个h1
+        let hs = document.querySelector('h1');
+        hs.innerHTML = "我是h1，我将被修改";
+
+        // 通过querySelector('h1')可以获得所有匹配的h1，存储到了NodeList中
+        let allHs = document.querySelectorAll('h1');
+        allHs[0].innerHTML = '我是第一个h1，我将被修改';
+        allHs[1].innerHTML = '我是第二个h1，我将被修改';
+
+
+    </script>
+    
+</body>
+</html>
