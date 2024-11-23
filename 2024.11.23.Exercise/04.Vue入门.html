@@ -40,12 +40,8 @@
         // 准备数据。在创建Vue实例时，传入了一个js对象，在这个js对象中，需要定义data方法，此方法的返回值就是Vue中的数据
         // 通过插值表达式渲染页面。插值表达式：{{...}}
 
-        data() {
-            return{
-                message: "hello Vue"
-            }
-        }
-    }).mount("#app");
+        // createApp方法需要传递一个对象作为参数，对象中有个data方法，data方法返回一个对象，这个对象中就是数据
+        data() {return{message: "hello Vue"}}}).mount("#app");
 
     // 注意，Vue中定义数据，必须通过data方法定义，data方法返回值是一个对象，需要在这个对象中定义数据
     // 插值表达式中的变量，必须是Vue中定义的数据，不然将会报错
