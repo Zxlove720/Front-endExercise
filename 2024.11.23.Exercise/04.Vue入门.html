@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue入门</title>
+</head>
+<body>
+
+    <div id="app">
+        <h1>{{message}}</h1>
+
+    </div>
+
+    
+    
+</body>
+
+<script type="module">
+    // Vue 用于构建用户页面的渐进式的JavaScript框架
+
+    // 1.构建用户页面：在Vue中，可以基于数据渲染出用户看到的界面：服务端返回的数据是原始的，用户阅读困难，
+    // Vue可以将原始数据遍历解析出来，渲染出用户容易阅读的界面
+    // 构建用户界面就是基于数据渲染出用户能够看懂的界面
+
+    // 2.渐进式：Vue是一个成熟的生态，其中的语法非常多；其渐进体现在使用Vue框架时，无需把所有组件和语法全部学习完毕，可以学习一点使用一点
+    // 由此可以引出Vue两种常见开发模式：
+        // 1.基于Vue提供的核心包，完成项目局部模块的改造
+        // 2.基于Vue提供的核心包、插件进行工程化开发（也就是整站开发）
+    
+    // 3.框架：一套完整的项目解决方案，可以用于快速构建项目；可以大大提高开发效率
+
+    // 使用Vue3的步骤：
+    // 1.准备一个html文件，在其中引入Vue模块（在官方文档中直接复制）；使用模块化的js，引入时需要设置<script>的属性type = "module"
+    // 2.创建Vue程序的应用实例，控制视图的元素
+    // 3.准备元素（div），交给Vue控制
+    import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
+    createApp({
+        // 数据驱动视图：
+        // 准备数据。在创建Vue实例时，传入了一个js对象，在这个js对象中，需要定义data方法，此方法的返回值就是Vue中的数据
+        // 通过插值表达式渲染页面。插值表达式：{{...}}
+
+        data() {
+            return{
+                message: "hello Vue"
+            }
+        }
+    }).mount("#app");
+
+    // 注意，Vue中定义数据，必须通过data方法定义，data方法返回值是一个对象，需要在这个对象中定义数据
+    // 插值表达式中的变量，必须是Vue中定义的数据，不然将会报错
+    // Vue接管的区域是createApp.mount挂载的区域，超出这个区域，则Vue无法控制
+    
+
+
+
+</script>
+</html>
