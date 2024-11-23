@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript事件监听</title>
+</head>
+<body>
+    <input type="button" id="btn1" value="点击1">
+    <input type="button" id="btn2" value="点击2">
+
+
+    <input type="button" id="btnTest" value="用于测试按钮" onclick="on()">
+    <input type="button" id="btnTest2" value="用于测试按钮2" onclick="on2()">
+
+
+    
+</body>
+
+<script>
+    // 事件：HTML事件是发生在HTML元素上面的“事情”
+    // 常见的有：按钮被点击；鼠标移动至元素上；输入框失去焦点；按下/松开键盘等
+
+    // 可以给这些事件绑定函数，当事件触发时，可以自动完成事件触发后的功能，这就是事件监听
+
+    // 事件监听的语法：
+    // 事件源.add EventListener('事件类型', 需要执行的函数)
+    // 1.事件源：哪个DOM元素触发了事件，就需要获取DOM元素
+    // 2.事件类型：用什么方式触发的事件，如：鼠标单击——click；鼠标经过——mouseover
+    // 3.需要执行的函数：触发该事件之后需要做的事
+    document.querySelector("#btn1").addEventListener('click', ()=>{
+        alert("1被点击了");
+    });
+
+    document.querySelector("#btn2").addEventListener('mouseover', ()=>{
+        console.log("2被划入了");
+    });
+
+    // 在早期的JavaScript，绑定事件还可以有另外两种方式
+    // 1.通过HTML标签中的事件属性进行绑定
+    // 在HTML中已经绑定了事件，在script中只需要写执行函数即可
+    function on() {
+        alert("测试成功");
+    }
+
+    // 2.通过DOM中Element元素的事件属性进行绑定
+    document.querySelector('#btnTest2').onclick = function() {
+        alert("按钮被点击了");
+    }
+
+    // 虽然老版本还可以使用，但是还是不建议使用这种写法，应该使用addEventListener的方法为其添加事件
+    // - on方式会被覆盖，addEventListener 方式可以绑定多次，拥有更多特性，推荐使用 addEventListener
+
+
+
+    
+
+</script>
+</html>
