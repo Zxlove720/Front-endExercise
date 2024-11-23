@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue常用指令</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- 特别注意，在JavaScript中==是相等运算符，只会比较值是否相等。在比较两个值，如：1和"1"时，会先进行类型转换，然后再进行比较
+        ===是严格相等运算符，不但要比较二者是否值相同，还会比较二者类型是否相同，如1和"1"是不同的 -->
+
+        <!-- v-bind：动态为HTML标签绑定属性值，如设置href、src、style样式等
+    语法：v-bind:属性名="属性值" -->
+        <button v-bind:style="{width: '500px'}">按钮</button>
+        <!-- 若v-bind绑定数据，那么其绑定的数据必须在data中定义/或基于data中定义的数据 -->
+<!-- 
+        v-if & v-show：这两类指令都是用来控制元素的显示和隐藏的
+        v-if 
+        语法：v-if="表达式"，表达式值为true，显示；false，隐藏
+        原理：基于条件进行判断，用于控制创建或移除元素节点（条件渲染）
+        场景：要么显示，要么隐藏，不适用于频繁切换的场景
+        其他：可以配合 v-else-if / v-else进行链式调用条件判断 -->
+        <br>
+        <br>
+        <br>
+
+        <td>
+            <!-- 此处使用了链式条件判断 -->
+            <span v-if="emp.job === '1'">班主任</span>
+            <span v-else-if="emp.job === '2'">讲师</span>
+            <span v-else-if="emp.job === '3'">学工主管</span>
+            <span v-else-if="emp.job === '4'">教研主管</span>
+            <span v-else-if="emp.job === '5'">咨询师</span>
+            <span v-else>其他</span>
+        </td>
+        <!-- 和Java等语言类似，v-else-if必须出现在v-if之后，可以出现多个；v-else必须出现在v-if/v-else-if之后，只能出现一个 -->
+        <!-- 浏览器是直接将v-if等条件判断了，变成<span>班主任</span>之后，再渲染的 -->
+
+        <!-- v-show：
+        v-show="表达式"，表达式若为true，显示；false，隐藏
+        原理：基于CSS样式display控制显示与隐藏
+        场景：适用于频繁切换显示隐藏的场景 
+        -->
+
+        <td>
+            <span v-show="emp.job === '1'">班主任</span>
+            <span v-show="emp.job === '2'">讲师</span>
+            <span v-show="emp.job === '3'">学工主管</span>
+            <span v-show="emp.job === '4'">教研主管</span>
+            <span v-show="emp.job === '5'">咨询师</span>
+        </td>
+        <!-- v-show是将所有的元素都进行渲染，只是通过控制display这个css样式，决定元素是否展示（表达式为真才展示） -->
+
+        <!-- v-if只渲染为真的元素；
+             v-show会渲染所有的元素，但是只展示为真的元素 -->
+
+    </div>
+</body>
+<script type="module">
+    import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
+    createApp({
+        data() {
+            return{
+                emp: {
+                    "name": "zhangsan",
+                    "age": 18,
+                    "job": "1",
+                },
+            };
+        }
+    }).mount('#app');
+
+
+</script>
+
+</html>
