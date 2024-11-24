@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios</title>
+</head>
+
+<body>
+    <button id="getData" type="button">GET</button>
+    <button id="postData" type="button">POST</button>
+</body>
+
+<script src="js/axios.js"></script>
+<script>
+    // 使用原生的Ajax请求还是比较繁琐，所以说一般使用Axios，Axios是对于Ajax的封装，主要是为了简化书写
+
+    // Axios使用比较简单，主要分为两步
+    // 1.在script标签的src中引入Axios文件
+        // 特别注意，这里是需要一对单独的script标签进行引入，而不是在引入的script标签中写代码
+    // 2.编写Axios代码，并绑定按钮
+
+    // Get请求：
+    //GET请求
+    // document.querySelector('#getData').onclick = function() {
+    //   axios({
+    //     url:'https://mock.apifox.cn/m1/3083103-0-default/emps/list',
+    //     method:'get'
+    //   }).then(function(res) {
+    //     console.log(res.data);
+    //   }).catch(function(err) {
+    //     console.log(err);
+    //   })
+    // }
+
+    // //POST请求
+    // document.querySelector('#postData').onclick = function() {
+    //   axios({
+    //     url:'https://mock.apifox.cn/m1/3083103-0-default/emps/update',
+    //     method:'post'
+    //   }).then(function(res) {
+    //     console.log(res.data);
+    //   }).catch(function(err) {
+    //     console.log(err);
+    //   })
+    // }
+
+    // Axios还针对了不同请求，提供了不同的api
+    // axios.请求方式(url, data, config) （data是post请求需要携带的数据，config是配置信息）
+    // 可以简化代码
+    document.querySelector("#getData").addEventListener('click', function () {
+        axios.get("https://mock.apifox.cn/m1/3083103-0-default/emps/list").then(result => {
+            console.log(result.data)
+        }).catch(error => {
+            console.log(error)
+        });
+    })
+</script>
+
+</html>
