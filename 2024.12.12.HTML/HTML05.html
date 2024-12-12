@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>表单</title>
 </head>
+
 <body>
 
-    <form action="#" method="post">
+    <!-- <form action="#" method="post"> -->
 
-        <!-- <label for="name">用户名：</label> 
+    <!-- <label for="name">用户名：</label> 
         &nbsp;<input type="text" placeholder="请输入用户名" id="name"/>
         <br>
 
@@ -23,7 +25,7 @@
             &nbsp;<input type="checkbox" name="hobby">睡觉
             &nbsp;<input type="checkbox" name="hobby" checked="checked">Java -->
 
-        <!-- 职位：&nbsp;
+    <!-- 职位：&nbsp;
         <select name="job" id="job">
             <option value="-1">请选择你的职位</option>
             <option value="0">班主任</option>
@@ -33,12 +35,99 @@
             <option value="4">校长</option>
         </select> -->
 
-        <!-- 评论区 -->
+    <!-- 评论区
         <textarea name="comment" id="comment" placeholder="please input your comments">
 
-        </textarea>
+        </textarea> -->
 
+    <!-- </form> -->
+
+
+    青春不常在，抓紧谈恋爱
+    <br>
+    <form action="#" method="post">
+        性别&nbsp;
+        男 <input type="radio" name="gender" value="1" checked="checked">
+        女 <input type="radio" name="gender" value="2">
+        <br>
+
+        生日&nbsp;
+        <select name="year" id="year">
+            <option value="-1" selected="selected">--请选择年--</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+        </select>
+
+        <select name="month" id="month">
+            <option value="-1" selected="selected">--请选择月</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+
+        <select name="day" id="day">
+            <option value="-1">--请选择日--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <br>
+
+        <label for="area">所在地区&nbsp;</label>
+        <input type="text" id="area">
+        <br>
+
+        婚姻状况&nbsp;
+        <input type="radio" name="marry" checked="checked">未婚
+        <input type="radio" name="marry">离婚
+        <br>
+
+        <label for="school">学历&nbsp;</label>
+        <input type="text" id="school">
+        <br>
+
+        喜欢类型&nbsp;
+        <input type="checkbox" name="love" value="1">妩媚
+        <input type="checkbox" name="love" value="2">可爱
+        <input type="checkbox" name="love" value="3">鲜肉
+        <input type="checkbox" name="love" value="4">all
+        <br>
+
+        <label for="introduction">自我介绍&nbsp;</label>
+        <textarea name="introduction" id="introduction"></textarea>
+        <br>
+
+        <input type="submit" value="免费注册">
+        <br>
+
+        <input type="checkbox" checked="checked">我同意注册条款和会员加入标准
+        <br>
+
+        <a href="#">我是会员，立即登录</a>
+        <br>
+
+        <h1>我承诺</h1>
+        <ul>
+            <li>年满18岁，单身</li>
+            <li>抱着严肃的态度</li>
+            <li>真诚寻找另一半</li>
+        </ul>
     </form>
-    
+
 </body>
+
 </html>
