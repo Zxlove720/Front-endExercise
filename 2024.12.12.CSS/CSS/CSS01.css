@@ -1,0 +1,20 @@
+h1 {
+    color: red;
+    font-size: 25px;
+}
+
+.red {
+    color: red;
+}
+
+.font100 {
+    font-size: 100px;
+}
+
+#blue_div {
+    color: blue;
+}
+
+* {
+    color: black;
+}
