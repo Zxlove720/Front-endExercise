@@ -1,0 +1,30 @@
+#test_div  {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+div {
+    color: pink;
+    text-align: center;
+    text-decoration: underline overline line-through none;
+}
+
+* {
+    color: black;
+}
+
+p {
+    font-family: Arial, "Microsoft Yahei", "微软雅黑";
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 5px;
+    text-indent: 2em;
+}
+
+em {
+    font-style: normal;
+}
