@@ -1,0 +1,19 @@
+div {
+    text-align: center;
+    
+}
+
+.logo {
+    width: 20%;
+}
+
+.search {
+    width: 275px;
+    height: 20px;
+}
+
+input.submit {
+    width: 75px;
+    height: 25px;
+}
+
