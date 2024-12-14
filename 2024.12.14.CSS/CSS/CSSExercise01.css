@@ -1,0 +1,28 @@
+/* 建议以后布局时，都先将浏览器默认的边距和内边距清除，这样便于布局，也便于不同浏览器的显示 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    width: 603px;
+    height: 226px;
+    /* background-color: pink; */
+    margin: 20px auto;
+    border-bottom: 1px dashed #999;  /* 这个属性是设置元素的下边框属性，宽度1px、样式为dashed（虚线）、颜色为#999 */
+}
+
+div h1 {
+    font-size: 28px;
+    border-bottom: 1px dashed #999;
+    padding-bottom: 20px;
+}
+
+div p {
+    background-image: url(dian.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
