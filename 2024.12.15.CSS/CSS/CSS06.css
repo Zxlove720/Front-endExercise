@@ -1,10 +1,17 @@
-div {
-    width: 200px;
-    height: 200px;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* div {
+    width: 178px;
+    height: 178px;
     border: 1px dashed blue;
     border-top: 1px dashed red;
+    padding: 10px;
 
-}
+} */
 
 
 table {
@@ -14,4 +21,44 @@ table {
 table, th, td {
     border: 1px solid black;
 }
+
+.nav {
+    border-top: 3px solid #ff8500; 
+    border-bottom: 1px solid #edeef0;
+    height: 41px;
+    color: #4c4c4c;
+    background-color: #fcfcfc;
+    padding: 15px;
+    padding-right: 10px;    
+}
+
+.nav>a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.nav>a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.radius {
+    border: 1px dashed red;
+    border-radius: 10px; 
+    box-shadow: -12px -10px;
+    
+    padding: 10px;
+    margin: 10px;
+}
+
+.radius p {
+    text-align: center;
+    text-shadow: 10px 12px 2px;
+}
+
+
+
 
