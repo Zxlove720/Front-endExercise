@@ -1,0 +1,17 @@
+div {
+    width: 200px;
+    height: 200px;
+    border: 1px dashed blue;
+    border-top: 1px dashed red;
+
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
