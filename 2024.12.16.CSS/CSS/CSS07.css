@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.web {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nav {
+    background-color:#f1f1f1;
+    /* 这是弹性布局，还没看 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* 设置查询栏（表单） */
+.search {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* 设置表单控件 */
+.search input[type="text"], .search select {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+/* 设置查询按钮（提交按钮） */
+.search button {
+    padding: 5px 15px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.search button[type="reset"] {
+    background-color: #6c757d;
+}
