@@ -17,7 +17,23 @@
     background-color: #f1f1f1;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-family: "楷体";
 }
+
+.nav h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.nav button {
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 4px;
+    font-size: 17px;
+    border: none;
+}
+
 /* 设置查询栏（表单） */
 .search {
     display: flex;
@@ -50,7 +66,8 @@
 }
 
 .information_table {
-    min-width: 100%;
+    /* min-width: 100%; */
+    width: 100%;
     border-collapse: collapse;
     /* margin: 0 20px; */
 }
@@ -69,4 +86,22 @@ table a {
 table a:hover {
     color: #007bff;
     text-decoration: underline;
+}
+
+/* 页脚版权 */
+.footer {
+    background-color: #8f8c8c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.footer .company-name {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.footer .copyright {
+    font-size: 0.9em;
 }
