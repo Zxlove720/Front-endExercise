@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>表单综合案例</title>
-    <link rel="stylesheet" href="CSS/CSS07.css">
+    <title>tlias智能学习系统</title>
+    <link rel="stylesheet" href="CSS/index.css">
 </head>
+
 <body>
+
     <div class="web">
         <div class="nav">
-            <h1>tlias 智能学习辅助系统</h1>
+            <h1>tlias智能学习系统</h1>
             <button type="submit">退出登录</button>
         </div>
 
         <div class="search">
             <form action="#" target="_blank">
-                <label for="name">姓名 &nbsp;</label>
-                <input type="text" id="name" placeholder="请输入员工姓名">
+                <label for="name">姓名：&nbsp;</label>
+                <input type="text" id="name" placeholder="请输入姓名">
 
-                <label for="gender">性别 &nbsp;</label>
+                <label for="gender">性别：&nbsp;</label>
                 <select name="gender" id="gender">
-                    <option value="-1" selected="selected">请选择员工性别</option>
+                    <option value="-1" selected="selected">请选择性别</option>
                     <option value="1">男</option>
                     <option value="2">女</option>
                 </select>
 
-                <label for="job">职位 &nbsp;</label>
+                <label for="job">职位：&nbsp;</label>
                 <select name="job" id="job">
-                    <option value="-1" selected="selected">请选择员工的职位</option>
-                    <option value="1">班主任</option>
-                    <option value="2">讲师</option>
+                    <option value="-1" selected="selected">请选择职位</option>
+                    <option value="1">老师</option>
+                    <option value="2">班主任</option>
                 </select>
+                
                 <button type="submit">查询</button>
-                <button type="reset">清空</button>
-            </form>            
+                <button type="reset">重置</button>
+            </form>
         </div>
-
 
         <div class="table">
             <table class="information_table">
@@ -122,13 +125,7 @@
                 </tbody>
             </table>
         </div>
-
-        <footer class="footer">
-            <p class="company-name">123456789</p>
-            <p class="copyright">版权所有 Copyright 2006-2024 All Rights Reserved</p>
-        </footer>
     </div>
-
-    
 </body>
+
 </html>

@@ -1,0 +1,98 @@
+/* 清除浏览器自带的默认页边距 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 控制整个页面的布局 */
+.web {
+    width: 80%;
+    /* 居中 */
+    margin: 0 auto;
+}
+
+.nav {
+    background-color: #f1f1f1;
+    /* 开启弹性布局 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: "楷体"; 
+}
+
+.nav h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.nav button {
+    font-size: 18px;
+    border: #f1f1f1 solid 1px;
+    border-radius: 4px;
+}
+
+.nav button:hover {
+    font-size: 20px;
+    text-decoration: underline;
+    color: #007bff;
+}
+
+
+/* 搜索表单区域 */
+.search {
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* 设置表单控件 */
+.search input[type="text"], .search select{
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.search button {
+    padding: 5px 15px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.search button[type="reset"] {
+    background-color: #6c757d;
+}
+
+.search button:hover {
+    font-weight: bold;
+}
+
+.information_table {
+    /* min-width: 100%; */
+    width: 100%;
+    border-collapse: collapse;
+    /* margin: 0 20px; */
+}
+
+.information_table td, .information_table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+table a {
+    color: orange;
+    text-decoration: none;
+}
+
+table a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
