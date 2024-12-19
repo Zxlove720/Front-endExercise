@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.web {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .logo {
+    padding: 10px;
+    margin: 10px;
+}
+
+.nav a {
+    padding: 10px;
+    padding-top: 20px;
+    margin-left: 10px;
+    width: 200px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.nav a:hover {
+    font-size: 31px;
+    text-decoration: underline;
+}
+
+.slider {
+    width: 100%; 
+    height: auto;
+    display: block; 
+}
+
+.break {
+    text-align: center;
+}
+
+.break h1 {
+    padding-top: 30px;
+    font-size: 65px;
+}
+
+.break img{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 300px;
+}
+
+.display {
+    text-align: center;
+}
+
+.display .heading-dark {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.display .food img {
+    margin-right: 25px;
+    width: 300px;
+}
+
+
+.introduction {
+    background-image: url(../images/fixed-img.jpg);
+    background-size: 80%;
+    margin-top: 50px;
+    height: 350px;
+    color: white;
+    text-align: center;
+}
+
+.introduction h1 {
+    margin: 20px;
+    padding: 10px;
+    padding-top: 35px;
+    font-size: 65px;
+}
+
+.introduction p {
+    padding-left: 100px;
+    font-size: 20px;
+}
+
+.introduction button {
+    margin-top: 40px;
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    color: white;
+    background-color: black;
+    border: white 1px solid;
+    border-radius: 30px;
+}
+
+.introduction button:hover {
+    width: 160px;
+    height: 65px;
+    font-size: 30px;
+}
+
+.blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show {
+    background-color: rgb(243, 243, 243);
+    width: 550px;
+    height: 550px;
+}
+
+.show img {
+    width: 550px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.show h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.show p {
+    font-size: 20px;
+}
+
+.show:hover {
+    background-color: silver;
+}
+
+.show h2:hover {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.events {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.events .pizza {
+    width: 750px;
+
+}
+
+.events h1 {
+    text-align: left;
+    font-size: 35px;
+    margin: 10px;
+}
+
+.events p {
+    font-size: 20px;
+}
+
+.events button {
+    margin-top: 50px;
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    height: 65px;
+    width: 175px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.events button:hover {
+    height: 75px;
+    width: 185px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 20px;
+    display: flex;              /* 激活 Flexbox 布局 */
+    justify-content: center;    /* 水平居中 */
+    align-items: center;        /* 垂直居中 */
+    height: 100px;              /* 设置 footer 高度 */
+    background-color: #333;     /* 背景色 */
+    color: white;               /* 文字颜色 */
+    padding: 0 20px;            /* 内边距 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
