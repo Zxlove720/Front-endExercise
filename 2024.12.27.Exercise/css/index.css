@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.web {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top .logo {
+    height: 75px;
+}
+
+.top .phone {
+    height: 50px;
+    margin-top: 10px;
+}
+
+
+.nav {
+    width: 100%;
+    
+    text-align: center;
+    background-color: rgb(94, 92, 92);
+}
+
+.nav a {
+    display: inline-block;
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: rgb(181, 221, 86);
+}
+
+.cake img {
+    width: 100%;
+}
+
+.introduction {
+    display: flex;
+    justify-content: space-between;
+}
+
+.introduction .hi {
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+.introduction h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.introduction p {
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.cakes {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.cakes img {
+    width: 275px;
+    border: white 1px solid;
+}
+
+.fruit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fruit .juiceimage {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 600px;
+}
+
+.fruit .sweet {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.fruit .sweet {
+    width: 260px;
+}
+
+.sweetimage1 {
+    display: block;
+}
+.sweetimage2 {
+    display: block;
+}
+.sweetimage3 {
+    display: block;
+}
+
+.sweetimage1:hover {
+    background: url(../images/txt_111_1.jpg);
+}
+
+.sweetimage2:hover {
+    background: url(../images/txt_222_2.jpg);
+}
+
+.sweetimage3:hover {
+    background: url(../images/txt_333_3.jpg);
+}
+
+.fruit .formimage {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.fruit input {
+    width: 200px;
+    height: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.fruit label {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.fruit select {
+    width: 200px;
+    height: 30px;
+    margin-bottom: 100px;
+    font-size: 15px;
+}
+
+.fruit .submitimage {
+    margin-left: 75px;
+}
+
+footer {
+    margin-top: 20px;
+    display: flex;              /* 激活 Flexbox 布局 */
+    justify-content: center;    /* 水平居中 */
+    align-items: center;        /* 垂直居中 */
+    height: 100px;              /* 设置 footer 高度 */
+    background-color: #333;     /* 背景色 */
+    color: white;               /* 文字颜色 */
+    padding: 0 20px;            /* 内边距 */
+    font-size: 1.25em;
+}
+
+.left {
+    flex: 1;
+    /* background-size: cover; */
+}
