@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.web {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-top: 15px;
+    margin-left: 250px;
+    margin-right: 250px;
+    width: 175px;
+}
+
+.phone {
+    margin-bottom: 5px;
+}
+
+.nav {
+    background-color: rgb(68, 67, 67);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+}
+
+.nav a {
+    margin-right: 45px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav a:hover {
+    font-size: 1.2em;
+}
+
+.start img {
+    width: 100%;
+}
+
+.break h1 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.hi {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hi .text {
+    margin-top: 20px;
+}
+
+.hi .text h1 {
+    color: rgb(209, 224, 7);
+    margin-bottom: 25px;
+}
+
+.hi .text p {
+    font-size: 15px;
+}
+
+.hi img {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.cakes {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cakes img {
+    margin-right: 7px;
+}
+
+.cakes img:hover {
+    width: 250px;
+}
+
+.right {
+    flex: 1;
+}
+
+.register {
+    display: flex;
+    justify-content: space-between;
+}
+
+.juice {
+    margin-top: 30px;
+}
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.register .choice .c1 {
+    width: 150px;
+    height: 125px;
+    background: url(../images/txt_111.jpg);
+}
+.register .choice .c1:hover {
+    background: url(../images/txt_111_1.jpg);
+}
+
+.register .choice .c2 {
+    width: 150px;
+    height: 125px;
+    background: url(../images/txt_222.jpg);
+}
+.register .choice .c2:hover {
+    background: url(../images/txt_222_2.jpg);
+}
+
+.register .choice .c3 {
+    width: 150px;
+    height: 125px;
+    background: url(../images/txt_333.jpg);
+}
+.register .choice .c3:hover {
+    background: url(../images/txt_333_3.jpg);
+}
+
+.choice img {
+    width: 100%;
+}
+
+.form {
+    margin-top: 30px;
+}
+
+.form input, select{
+    width: 150px;
+    height: 25px;
+    margin-bottom: 15px;
+}
+
+footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 55px;
+    background-color: black;
+    color: white;
+    font-size: 0.95em;
+}
