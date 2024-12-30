@@ -158,3 +158,17 @@ footer {
     color: white;
     font-size: 0.95em;
 }
+
+
+
+footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    font-size: 0.95em;
+    height: 55px;
+}
